@@ -1,5 +1,1 @@
-bonjour
-hola
-good afternoon
-annyeong
-
+hi
