@@ -1,6 +1,6 @@
 pipeline {
     agent any
-    properties([disableConcurrentBuilds(), pipelineTriggers([githubPush()])])
+    options([disableConcurrentBuilds(), pipelineTriggers([githubPush()])])
     stages {
         stage('MORNING') {
             steps {
