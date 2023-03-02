@@ -2,19 +2,24 @@ pipeline {
     agent any
 
     stages {
-        stage('build') {
+        stage('MORNING') {
             steps {
-                echo 'This is to build'
+                echo 'IT IS MORNING'
             }
         }
-         stage('test') {
+         stage('AFTERNOON') {
             steps {
-                echo 'This is to test'
+                echo 'IT IS AFTERNOON'
             }
         }
-         stage('deploy') {
+         stage('EVENING') {
             steps {
-                echo 'This is to deploy'
+                echo 'IT IS EVENING'
+            }
+        }
+         stage('NIGHT') {
+            steps {
+                echo 'IT IS NIGHT'
             }
         }
     }
