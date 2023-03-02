@@ -3,26 +3,19 @@ pipeline {
         options {
   disableConcurrentBuilds()
 }
-            stages {
-                stage('MORNING') {
-                    steps {
-                        echo 'IT IS MORNING'
-                    }
-                }
-                stage('AFTERNOON') {
-                    steps {
-                        echo 'IT IS AFTERNOON'
-                    }
-                }
-                stage('EVENING') {
-                    steps {
-                        echo 'IT IS EVENING'
-                    }
-                }
-                stage('NIGHT') {
-                    steps {
-                        echo 'IT IS NIGHT'
-                    }
+          stage('Example') {
+            input {
+                message "Should we continue?"
+                ok "Yes, we should."
+                submitter "alice,bob"
+                parameters {
+                    string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
                 }
             }
+            steps {
+                echo "Hello, ${PERSON}, nice to meet you."
+            }
+        }
+                
+     }
 }
