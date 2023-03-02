@@ -3,6 +3,7 @@ pipeline {
         options {
   disableConcurrentBuilds()
 }
+    stages{
           stage('Example') {
             input {
                 message "Should we continue?"
@@ -17,5 +18,5 @@ pipeline {
             }
         }
                 
-    
+    }
 }
